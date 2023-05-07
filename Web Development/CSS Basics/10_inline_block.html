@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inlline and Block Style</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      li {
+        display: inline;
+      }
+      li a {
+        padding-right: 20px;
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
+      .box {
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 15px;
+        display: inline-block; /* Coverting block element to block-inlineso that we can give width. Inline not allows width*/
+        width: 33.1%;
+        box-sizing: border-box;
+        /* text-align: center; */
+      }
+    </style>
+  </head>
+  <body></body>
+  <ul>
+    <li><a href="#">Technology</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Fashion</a></li>
+  </ul>
+
+  <br /><br />
+  <img
+    src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_960_720.png"
+    alt="leaf"
+  />
+
+  <div class="box">
+    <h3>Heading</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam in
+      nemo fugiat animi, accusamus ut hic commodi non corporis sed voluptatum
+      consequuntur architecto, aperiam magnam consectetur minima repudiandae
+      eligendi iusto.
+    </p>
+  </div>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam in
+      nemo fugiat animi, accusamus ut hic commodi non corporis sed voluptatum
+      consequuntur architecto, aperiam magnam consectetur minima repudiandae
+      eligendi iusto.
+    </p>
+  </div>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam in
+      nemo fugiat animi, accusamus ut hic commodi non corporis sed voluptatum
+      consequuntur architecto, aperiam magnam consectetur minima repudiandae
+      eligendi iusto.
+    </p>
+  </div>
+</html>
