@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="container"
+      style="
+        box-sizing: border-box;
+        max-width: 400px;
+        padding: 30px;
+        margin: auto;
+      "
+    >
+      <div id="table-container"></div>
+      <p>
+        <button onclick="renderData(data1)">1</button> &nbsp; &nbsp; &nbsp;
+        <button onclick="renderData(data2)">2</button>
+      </p>
+    </div>
+  </body>
+  <script>
+    const data1 = [
+      {
+        name: "Queens",
+        diff: "Easy",
+        comp: "90%",
+      },
+      {
+        name: "Queens2",
+        diff: "Easy2",
+        comp: "42%",
+      },
+      {
+        name: "Queens3",
+        diff: "Easy3",
+        comp: "43%",
+      },
+    ];
+    const data2 = [
+      {
+        name: "Kings",
+        diff: "Easy",
+        comp: "57%",
+      },
+      {
+        name: "Kings2",
+        diff: "Easy2",
+        comp: "96%",
+      },
+      {
+        name: "Kings3",
+        diff: "Easy3",
+        comp: "73%",
+      },
+    ];
+
+    const renderData = (data=[{}]) => {
+      const container = document.getElementById("table-container");
+      container.innerHTML = "";
+
+      const dataTable = document.createElement("table");
+
+      data.forEach((item) => {
+        const row = document.createElement("tr");
+        Object.keys(item).map((key) => {
+          const cellData = document.createElement("td");
+          cellData.innerHTML = item[key];
+          row.appendChild(cellData);
+        });
+        dataTable.appendChild(row);
+      });
+      container.appendChild(dataTable);
+    };
+  </script>
+</html>
