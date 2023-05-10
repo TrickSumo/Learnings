@@ -1,5 +1,17 @@
-#heading {
+#block1 {
     background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+#block2 {
+    background-color: rgb(31, 57, 3);
+    color: white;
+    text-align: center;
+}
+
+#parent {
+    background-color: rgb(255, 0, 162);
     color: white;
     text-align: center;
 }
