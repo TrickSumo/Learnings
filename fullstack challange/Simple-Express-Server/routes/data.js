@@ -8,7 +8,7 @@ router.get('/', authHandler, (req,res)=> {
     res.send("Your secret code is - 123456");
 })
 
-// Post request with middleware - http://localhost:3003/data?secret=true&data=123456789
+// Post request with middleware - http://localhost:3003/data?secret=true and JSON body as {"newData":4567}.
 .post('/', authHandler, (req,res) => {
     res.send(`${req.body.newData} Posted Successfully!!!`)
 })
