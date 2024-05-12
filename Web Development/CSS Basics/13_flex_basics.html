@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+    }
+    .flex-container {
+      display: flex;
+    }
+    .box {
+      background-color: aqua;
+      color: brown;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+    }
+    .big-box {
+      background-color: aqua;
+      color: brown;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+      width: 300px;
+    }
+
+    #box2 {
+      display: flex;
+    }
+
+    #box3 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #box4 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    #box55 {
+      display: flex;
+    }
+    #box5 {
+      display: flex;
+      flex-wrap: wrap;
+      /* flex-wrap: wrap-reverse; */
+    }
+  </style>
+  <body>
+    <h1>Normal behaviour without flexbox</h1>
+    <div id="box1">
+      <div class="box" id="item1a">a</div>
+      <div class="box" id="item1b">b</div>
+      <div class="box" id="item1c">c</div>
+    </div>
+
+    <h1>Flex defualt behaviuor</h1>
+    <div id="box2">
+      <div class="box" id="item2a">a</div>
+      <div class="box" id="item2b">b</div>
+      <div class="box" id="item2c">c</div>
+    </div>
+
+    <h1>Flex column</h1>
+    <div id="box3">
+      <div class="box" id="item3a">a</div>
+      <div class="box" id="item3b">b</div>
+      <div class="box" id="item3c">c</div>
+    </div>
+
+    <h1>Flex column-reverse</h1>
+    <div id="box4">
+      <div class="box" id="item4a">a</div>
+      <div class="box" id="item4b">b</div>
+      <div class="box" id="item4c">c</div>
+    </div>
+
+    <h1>No Flex wrap</h1>
+    <div id="box55">
+      <div class="box" id="item55a">a</div>
+      <div class="box" id="item55b">b</div>
+      <div class="box" id="item55c">c</div>
+      <div class="box" id="item55a">a</div>
+      <div class="box" id="item55b">b</div>
+      <div class="box" id="item55c">c</div>
+      <div class="box" id="item55a">a</div>
+      <div class="box" id="item55b">b</div>
+      <div class="box" id="item55c">c</div>
+      <div class="box" id="item55a">a</div>
+      <div class="box" id="item55b">b</div>
+      <div class="box" id="item55c">c</div>
+    </div>
+
+    <h1>Flex wrap - to go to next line if no screeen to display</h1>
+    <div id="box5">
+      <div class="box" id="item5a">a</div>
+      <div class="box" id="item5b">b</div>
+      <div class="box" id="item5c">c</div>
+      <div class="box" id="item5a">a</div>
+      <div class="box" id="item5b">b</div>
+      <div class="box" id="item5c">c</div>
+      <div class="box" id="item5a">a</div>
+      <div class="box" id="item5b">b</div>
+      <div class="box" id="item5c">c</div>
+      <div class="box" id="item5a">a</div>
+      <div class="box" id="item5b">b</div>
+      <div class="box" id="item5c">c</div>
+      <div class="box" id="item5a">a</div>
+      <div class="box" id="item5b">b</div>
+      <div class="box" id="item5c">c</div>
+      <div class="box" id="item5a">a</div>
+      <div class="box" id="item5b">b</div>
+      <div class="box" id="item5c">c</div>
+    </div>
+  </body>
+</html>

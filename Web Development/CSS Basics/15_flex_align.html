@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .box {
+      background-color: aqua;
+      color: brown;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+    }
+    .big-box {
+      background-color: aqua;
+      color: brown;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+      width: 300px;
+    }
+    .container-box {
+      background-color: rgb(138, 246, 43);
+      height: 300px;
+      width: 300px;
+      margin: 10px;
+    }
+    .big-container-box {
+      background-color: rgb(138, 246, 43);
+      height: 300px;
+      width: 100%; /* Adjusted width to better demonstrate wrapping */
+      margin: 10px;
+    }
+    /* Justify Content */
+    #flex-container1 {
+      display: flex;
+      justify-content: flex-start;
+    }
+    #flex-container2 {
+      display: flex;
+      justify-content: flex-end;
+    }
+    #flex-container3 {
+      display: flex;
+      justify-content: center;
+    }
+    #flex-container4 {
+      display: flex;
+      justify-content: space-around;
+    }
+    #flex-container5 {
+      display: flex;
+      justify-content: space-between;
+    }
+    #flex-container6 {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    /* Align Items */
+
+    #flex-container7 {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    #flex-container8 {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    #flex-container9 {
+      display: flex;
+      align-items: center;
+    }
+
+    #flex-container10 {
+      display: flex;
+      align-items: baseline;
+    }
+
+    #flex-container11 {
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Align Self */
+    #flex-container12 {
+      display: flex;
+    }
+
+    #item12a {
+      align-self: flex-end;
+    }
+    #item12b {
+      align-self: flex-start;
+    }
+    #item12c {
+      align-self: center;
+    }
+
+    #flex-container13 {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+    }
+
+    #flex-container14 {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    #flex-container15 {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  </style>
+  <body>
+    <h1>
+      <p>
+        Justify-content(main axis - flex-start, flex-end, center, space-between,
+        space-around, space-evenly) and align-items (cross axis - flex-start,
+        flex-end, center, baseline, stretch) are used for parent container
+      </p>
+      <p>Align-self is used in child</p>
+      <p>
+        align-content (with flex-wrap enabled): This property aligns the flex
+        container's lines within the flex container when there is extra space in
+        the cross-axis, similar to how justify-content aligns individual items
+        within the main axis.
+      </p>
+      <br />
+    </h1>
+
+    <h1>Justify Content</h1>
+    <div id="flex-container1">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    <div id="flex-container2">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    <div id="flex-container3">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    space-around - gives you space around each item but with half the space at
+    the edges compared to between items.
+    <div id="flex-container4">
+      <div class="big-box" id="itema">spaces on sides as well</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    space-between - distributes space between items but not between the items
+    and the container edges.
+    <div id="flex-container5">
+      <div class="big-box" id="itema">no space on sides</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    space-evenly - provides an even space distribution between items and also
+    between the items and the container edges.
+    <div id="flex-container6">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+
+    <!-- Cross Axis  -->
+    <h1>Align Items</h1>
+    start
+    <div id="flex-container7" class="container-box">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    end
+    <div id="flex-container8" class="container-box">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    center
+    <div id="flex-container9" class="container-box">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    baseline
+    <div id="flex-container10" class="container-box">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+    stretch
+    <div id="flex-container11" class="container-box">
+      <div class="big-box" id="itema">e</div>
+      <div class="big-box" id="itemb">f</div>
+      <div class="big-box" id="itemc">g</div>
+    </div>
+
+    <h1>Align Self</h1>
+    <div id="flex-container12" class="container-box">
+      <div class="big-box" id="item12a">e</div>
+      <div class="big-box" id="item12b">f</div>
+      <div class="big-box" id="item12c">g</div>
+    </div>
+
+    <h1>Align Content</h1>
+    space-around
+    <div id="flex-container13" class="big-container-box">
+      <div class="box" id="item13a">e</div>
+      <div class="box" id="item13b">f</div>
+      <div class="box" id="item13c">g</div>
+      <div class="box" id="item13aa">e</div>
+      <div class="box" id="item13ba">f</div>
+      <div class="box" id="item13cs">g</div>
+      <div class="box" id="item13as">e</div>
+      <div class="box" id="item13bd">f</div>
+      <div class="box" id="item13cd">g</div>
+      <div class="box" id="item13af">e</div>
+      <div class="box" id="item13bf">f</div>
+      <div class="box" id="item13cg">g</div>
+      <div class="box" id="item13a">e</div>
+      <div class="box" id="ited13b">f</div>
+      <div class="box" id="itemd13c">g</div>
+      <div class="box" id="itemd13aa">e</div>
+      <div class="box" id="itedm13ba">f</div>
+      <div class="box" id="itedm13cs">g</div>
+      <div class="box" id="itedm13as">e</div>
+      <div class="box" id="itedm13bd">f</div>
+      <div class="box" id="itdem13cd">g</div>
+      <div class="box" id="itedm13af">e</div>
+      <div class="box" id="itdem13bf">f</div>
+      <div class="box" id="itdem13cg">g</div>
+    </div>
+    space-between
+    <div id="flex-container14" class="big-container-box">
+      <div class="box" id="item13a">e</div>
+      <div class="box" id="item13b">f</div>
+      <div class="box" id="item13c">g</div>
+      <div class="box" id="item13aa">e</div>
+      <div class="box" id="item13ba">f</div>
+      <div class="box" id="item13cs">g</div>
+      <div class="box" id="item13as">e</div>
+      <div class="box" id="item13bd">f</div>
+      <div class="box" id="item13cd">g</div>
+      <div class="box" id="item13af">e</div>
+      <div class="box" id="item13bf">f</div>
+      <div class="box" id="item13cg">g</div>
+      <div class="box" id="item13a">e</div>
+      <div class="box" id="ited13b">f</div>
+      <div class="box" id="itemd13c">g</div>
+      <div class="box" id="itemd13aa">e</div>
+      <div class="box" id="itedm13ba">f</div>
+      <div class="box" id="itedm13cs">g</div>
+      <div class="box" id="itedm13as">e</div>
+      <div class="box" id="itedm13bd">f</div>
+      <div class="box" id="itdem13cd">g</div>
+      <div class="box" id="itedm13af">e</div>
+      <div class="box" id="itdem13bf">f</div>
+      <div class="box" id="itdem13cg">g</div>
+    </div>
+    center
+    <div id="flex-container15" class="big-container-box">
+      <div class="box" id="item13a">e</div>
+      <div class="box" id="item13b">f</div>
+      <div class="box" id="item13c">g</div>
+      <div class="box" id="item13aa">e</div>
+      <div class="box" id="item13ba">f</div>
+      <div class="box" id="item13cs">g</div>
+      <div class="box" id="item13as">e</div>
+      <div class="box" id="item13bd">f</div>
+      <div class="box" id="item13cd">g</div>
+      <div class="box" id="item13af">e</div>
+      <div class="box" id="item13bf">f</div>
+      <div class="box" id="item13cg">g</div>
+      <div class="box" id="item13a">e</div>
+      <div class="box" id="ited13b">f</div>
+      <div class="box" id="itemd13c">g</div>
+      <div class="box" id="itemd13aa">e</div>
+      <div class="box" id="itedm13ba">f</div>
+      <div class="box" id="itedm13cs">g</div>
+      <div class="box" id="itedm13as">e</div>
+      <div class="box" id="itedm13bd">f</div>
+      <div class="box" id="itdem13cd">g</div>
+      <div class="box" id="itedm13af">e</div>
+      <div class="box" id="itdem13bf">f</div>
+      <div class="box" id="itdem13cg">g</div>
+    </div>
+  </body>
+</html>

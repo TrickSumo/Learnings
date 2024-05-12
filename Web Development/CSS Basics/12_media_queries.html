@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css" /> 
+    Download responsive CSS only if max screen size is 768px (ie. it is tablet or smartphone) -->
+    <title>Media Queries</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      h1 {
+        display: none;
+      }
+
+      /* Smatphones have width generally less than 500px */
+
+      @media (max-width: 500px) {
+        /* if 500px is max available width */
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: red;
+        }
+        #smartphone h1 {
+          display: block;
+        }
+      }
+
+      /* Tablets */
+
+      @media (min-width: 501px) and (max-width: 768px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: rgb(54, 32, 179);
+        }
+
+        #tablet h1 {
+          display: block;
+        }
+      }
+
+      /* Normal */
+      @media (min-width: 769px) and (max-width: 1200px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: rgb(32, 223, 150);
+        }
+
+        #normal h1 {
+          display: block;
+        }
+      }
+
+      /* Widescreen */
+      @media (min-width: 1201px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: rgb(243, 14, 228);
+        }
+
+        #widescreen h1 {
+          display: block;
+        }
+      }
+
+      /* Landscape */
+      @media (max-height: 500px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: rgb(10, 197, 225);
+        }
+
+        #landscape h1 {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="widescreen"><h1>Widescreen</h1></div>
+    <div id="normal"><h1>Normal</h1></div>
+    <div id="tablet"><h1>Tablet</h1></div>
+    <div id="smartphone"><h1>Smartphone</h1></div>
+    <div id="landscape"><h1>Landscape</h1></div>
+  </body>
+</html>

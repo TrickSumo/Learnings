@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    .flex-container {
+      display: flex;
+    }
+    .box {
+      background-color: aqua;
+      color: brown;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+    }
+    .big-box {
+      background-color: aqua;
+      color: brown;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5%;
+      width: 300px;
+    }
+
+    .box6 {
+      flex-grow: 1;
+    }
+
+    #item66a {
+      flex-grow: 1;
+    }
+    #item66b {
+      flex-grow: 2;
+    }
+    #item66c {
+      flex-grow: 0;
+    }
+
+    #item7a {
+      flex-shrink: 3;
+    }
+
+    .item77 {
+      flex-grow: 1;
+    }
+
+    #item77j {
+      flex-shrink: 5;
+    }
+
+    #item77k {
+      flex-shrink: 3;
+    }
+
+    #item8a {
+      flex-basis: 100px; /* Set initial size of item8a to 100px */
+      background-color: red;
+      flex-grow: 3;
+    }
+
+    #item8b {
+      flex-basis: 200px; /* Set initial size of item8b to 200px */
+      background-color: green;
+      flex-shrink: 1;
+    }
+
+    #item8c {
+      flex-basis: 300px; /* Set initial size of item8c to 300px */
+      background-color: blue;
+      flex-shrink: 0;
+    }
+
+    .box9 {
+      flex: 1 1 300px;
+      /* grow shrink basis */
+    }
+  </style>
+  <body>
+    <h1>
+      Flex Properties are applied to flex items, which are the children of a
+      flex container.
+    </h1>
+    flex-grow determines how much a flex item will grow relative to the rest of
+    the flex items. <br />
+    flex-shrink determines how much a flex item will shrink relative to the rest
+    of the flex items. <br />flex-basis sets the initial main size of a flex
+    item before the remaining space is distributed.
+    <hr />
+    <h1>Flex grow</h1>
+    This property defines the ability of a flex item to grow if necessary. It's
+    a numerical value that represents the proportion of available space in the
+    flex container that the item should take up.
+
+    <div class="flex-container">
+      <div class="box box6 item6a">a</div>
+      <div class="box box6 item6b">b</div>
+      <div class="box box6 item6c">c</div>
+    </div>
+
+    Items can grow in different way
+    <div class="flex-container">
+      <div class="box" id="item66a">e</div>
+      <div class="box" id="item66b">f</div>
+      <div class="box" id="item66c">g</div>
+    </div>
+
+    <br />
+    <hr />
+    align-items: stretch (on the container): This property will stretch all
+    child elements to fit the container's cross-axis (vertical axis if the flex
+    direction is row, horizontal axis if the flex direction is column), assuming
+    the children do not have a cross-size (height or width depending on the flex
+    direction) set. It doesn't affect the main-axis size (horizontal size for a
+    row, vertical size for a column). <br />flex-grow (on the child): This
+    property allows a child element to grow to absorb any extra space along the
+    main-axis of the container. If flex-grow is set to a positive value, the
+    flex item will grow to take up available space on the main-axis, in
+    proportion to other flex items' flex-grow values. So, align-items: stretch
+    ensures that flex items fill the container along the cross-axis, while
+    flex-grow allows flex items to expand and fill the remaining space on the
+    main-axis. Both can be used together to make flex items fill the entire
+    space of the flex container in both dimensions.
+    <hr />
+    <br />
+
+    <h1>Flex Shrink</h1>
+    This property defines the ability of a flex item to shrink if necessary.
+    Like flex-grow, it's a numerical value that represents how much the flex
+    item will shrink relative to the rest of the flex items in the container
+    when there isn't enough space. A higher flex-shrink value means the item
+    will shrink more than items with a lower flex-shrink value.
+    <div class="flex-container">
+      <div class="big-box" id="item7a">e</div>
+      <div class="big-box" id="item7b">f</div>
+      <div class="big-box" id="item7c">g</div>
+    </div>
+
+    Grow equally but shrink in differentt order
+    <div class="flex-container">
+      <div class="big-box item77" id="item77i">i</div>
+      <div class="big-box item77" id="item77j">j</div>
+      <div class="big-box item77" id="item77k">k</div>
+    </div>
+
+    <h1>Flex basis</h1>
+    <div class="flex-container">
+      <div class="box" id="item8a">a</div>
+      <div class="box" id="item8b">b</div>
+      <div class="box" id="item8c">c</div>
+    </div>
+
+    <h1>Flex</h1>
+    Its combination of avobe three felx properties. "flex grow shrink basis"
+    <div class="flex-container">
+      <div class="box box9" id="item9a"><h1>a</h1></div>
+      <div class="box box9" id="item9b"><h1>b</h1></div>
+      <div class="box box9" id="item9c"><h1>c</h1></div>
+    </div>
+  </body>
+</html>

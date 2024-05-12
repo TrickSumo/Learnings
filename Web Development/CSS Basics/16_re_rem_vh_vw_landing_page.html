@@ -1,0 +1,67 @@
+<!-- em => multiplier to font size of parent container
+rem => multiplier to font size of root container (16px)
+vh => viewport height
+vw => viewport width -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Landing Page</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .btn {
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem;
+      margin: 2rem;
+    }
+    .btn:hover {
+      background-color: #f7c08a;
+    }
+    h1 {
+      padding: 1.5rem;
+      color: #ffffff;
+    }
+    p {
+      padding: 3rem;
+      color: #ffffff;
+    }
+    #hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: url("https://cdn.pixabay.com/photo/2023/05/31/08/09/bee-8030812_1280.jpg")
+        no-repeat center center/cover;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div id="hero">
+        <div>
+          <h1>Welcome Stranger!</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+            laborum consectetur assumenda officiis amet? Praesentium, ipsa magni
+            officia eveniet dolorem, fuga minima illo quasi temporibus quisquam,
+            voluptates nam! Esse, corporis?
+          </p>
+          <a href="#" class="btn">Take My Money 🐻‍❄️</a>
+        </div>
+      </div>
+      <div>©2024</div>
+    </div>
+  </body>
+</html>
